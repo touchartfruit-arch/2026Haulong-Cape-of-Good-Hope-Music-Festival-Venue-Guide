@@ -1,0 +1,10 @@
+{
+  "name": "後龍好望角音樂祭會場導覽",
+  "short_name": "後龍導覽",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#f7f2e8",
+  "theme_color": "#245a43",
+  "lang": "zh-Hant",
+  "icons": []
+}

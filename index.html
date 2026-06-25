@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#f6f2e9" />
+    <meta property="og:title" content="後龍好望角音樂祭會場導覽" />
+    <meta property="og:description" content="高鐵苗栗站、臺鐵豐富站往返後龍新港國中小的 AR 行動導覽。" />
+    <title>後龍好望角音樂祭會場導覽</title>
+    <link rel="manifest" href="./manifest.webmanifest" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="map-pane" aria-label="AR 導覽畫面">
+        <video id="camera" class="camera" autoplay muted playsinline></video>
+        <div class="camera-fallback" id="cameraFallback">
+          <div class="fallback-grid"></div>
+          <div class="fallback-copy">
+            <strong>AR 導覽待啟動</strong>
+            <span>可開啟相機疊加方位提示，或直接使用地圖導航。</span>
+          </div>
+        </div>
+        <div class="direction-ring" aria-hidden="true">
+          <div class="bearing-label" id="bearingLabel">NE</div>
+          <div class="needle" id="needle"></div>
+        </div>
+        <div class="ar-card">
+          <span class="pill" id="journeyPill">去程</span>
+          <h1>後龍好望角音樂祭會場導覽</h1>
+          <p id="routeSummary">從高鐵苗栗站前往後龍新港國中小活動會場</p>
+          <div class="progress">
+            <span id="progressBar"></span>
+          </div>
+        </div>
+      </section>
+
+      <section class="control-pane" aria-label="導覽控制">
+        <div class="toolbar">
+          <button class="icon-button" id="cameraButton" type="button" title="開啟相機" aria-label="開啟相機">◎</button>
+          <button class="icon-button" id="locateButton" type="button" title="更新位置" aria-label="更新位置">⌖</button>
+          <a class="icon-button" id="shareButton" href="#" title="Facebook 分享" aria-label="Facebook 分享">f</a>
+        </div>
+
+        <div class="panel compact">
+          <div class="segmented" role="tablist" aria-label="旅程方向">
+            <button class="active" data-journey="outbound" type="button">去程</button>
+            <button data-journey="return" type="button">回程</button>
+          </div>
+          <label class="field">
+            <span>出發地</span>
+            <select id="originSelect">
+              <option value="hsr">高鐵苗栗站</option>
+              <option value="fengfu">臺鐵豐富站</option>
+            </select>
+          </label>
+          <div class="action-row">
+            <a class="primary-action" id="mapsLink" target="_blank" rel="noreferrer">開啟 Google Maps</a>
+            <button class="secondary-action" id="nextStep" type="button">下一站</button>
+          </div>
+        </div>
+
+        <div class="panel guide-panel">
+          <div class="section-heading">
+            <h2>路線導覽</h2>
+            <span id="stepCount">1 / 4</span>
+          </div>
+          <ol class="steps" id="steps"></ol>
+        </div>
+
+        <div class="panel qa-panel">
+          <div class="section-heading">
+            <h2>導覽問答</h2>
+            <span>繁中回答</span>
+          </div>
+          <div class="quick-questions" id="quickQuestions"></div>
+          <div class="chat-log" id="chatLog" aria-live="polite"></div>
+          <form class="ask-form" id="askForm">
+            <input id="questionInput" autocomplete="off" placeholder="輸入活動、交通、廁所等問題" />
+            <button type="submit">送出</button>
+          </form>
+        </div>
+
+        <details class="panel review-panel" open>
+          <summary>設計校準</summary>
+          <ul>
+            <li>手機、網站、Facebook 內建瀏覽器皆以單頁網頁運作。</li>
+            <li>去程與回程皆有獨立導覽，並可切換出發站。</li>
+            <li>相機 AR 為輔助層，主要導航交由 Google Maps 確保可用性。</li>
+            <li>導覽問答一律以繁體中文回覆。</li>
+          </ul>
+        </details>
+      </section>
+    </main>
+    <script src="./app.js"></script>
+  </body>
+</html>
