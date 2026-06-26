@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 420" role="img" aria-labelledby="title desc">
+  <title id="title">雅世代創意行銷</title>
+  <desc id="desc">雅世代創意行銷文字標誌</desc>
+  <rect width="960" height="420" rx="36" fill="#fff8ec"/>
+  <g transform="translate(74 58)">
+    <circle cx="100" cy="100" r="82" fill="#245a43"/>
+    <circle cx="145" cy="65" r="42" fill="#d7a647"/>
+    <path d="M58 138c82 12 154-24 199-90-10 92-76 166-166 186-30-19-45-48-33-96Z" fill="#91b66d"/>
+    <path d="M95 68c28 22 48 49 60 82-38-8-72-25-101-52 9-17 22-27 41-30Z" fill="#f2eadb"/>
+  </g>
+  <text x="350" y="146" fill="#17201b" font-family="'Noto Sans TC','Microsoft JhengHei',sans-serif" font-size="66" font-weight="800">雅世代</text>
+  <text x="350" y="230" fill="#245a43" font-family="'Noto Sans TC','Microsoft JhengHei',sans-serif" font-size="52" font-weight="700">創意行銷</text>
+  <text x="352" y="292" fill="#657068" font-family="Arial,sans-serif" font-size="26" font-weight="700" letter-spacing="4">CREATIVE MARKETING</text>
+</svg>
